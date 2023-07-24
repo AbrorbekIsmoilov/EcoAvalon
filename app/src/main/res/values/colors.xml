@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_color">#045AFD</color>
+    <color name="green_color">#50D33B</color>
+    <color name="green_color_bold">#0EAA4F</color>
+    <color name="ripple_effect_color">#B7D0D1</color>
+    <color name="indicator_not_active_color">#33045AFD</color>
+    <color name="shadow_color">#0F045AFD</color>
+    <color name="main_background">#F6F7F8</color>
+    <color name="black">#FF000000</color>
+    <color name="black_text_color1">#262626</color>
+    <color name="black_text_color2">#1E1E1E</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_btn">#F1F6F8</color>
+    <color name="gray_text_color">#C5C5C5</color>
+    <color name="gray_text_color2">#80262626</color>
+    <color name="gender_gray">#DCDCDC</color>
+    <color name="bottom_icon_gray">#A7A7A7</color>
+</resources>

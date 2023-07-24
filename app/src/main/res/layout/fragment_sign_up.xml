@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.registration.SignUp">
+    <TextView
+        android:id="@+id/reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_semibold"
+        android:text="Registration"
+        android:textColor="#15753D"
+        android:textSize="34sp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/reg"
+        app:layout_constraintStart_toStartOf="@+id/reg"
+        app:layout_constraintTop_toBottomOf="@+id/reg">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@drawable/background_sent_message_btn"
+            android:backgroundTint="#E6E2FF"
+            android:src="@drawable/man"
+            app:civ_border_color="@color/green_color_bold"
+            app:civ_border_width="0.8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="100dp"
+            android:outlineSpotShadowColor="@color/green_color"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="360dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98">
+
+            <ImageView
+                android:id="@+id/sign_up_change_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_camera"
+                app:tint="@color/bottom_icon_gray" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/fullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_input_388_70"
+        android:hint="Ful name"
+        android:paddingStart="20dp"
+        android:textColor="@color/black_text_color2"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+    <EditText
+        android:id="@+id/phoneEditTextNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_input_388_70"
+        android:fontFamily="@font/gilroy_regular"
+        android:hint="Phone number"
+        android:inputType="phone|numberSigned"
+        android:paddingStart="50dp"
+        android:textColorHint="@color/gray_text_color"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/code"
+        app:layout_constraintTop_toBottomOf="@+id/fullName"
+        tools:ignore="MissingClass" />
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/code"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_defaultNameCode="UZ"
+        android:gravity="center"
+        app:ccp_showFlag="true"
+        app:ccp_arrowSize="30dp"
+        app:ccp_textSize="25sp"
+        app:ccpDialog_searchEditTextTint="@color/green_color_bold"
+        app:ccp_selectionMemoryTag="@string/app_name"
+        android:background="@drawable/background_input_388_70"
+        app:ccp_showFullName="true"
+        app:ccp_showNameCode="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullName" />
+
+
+
+    <TextView
+        android:id="@+id/sendOTPBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_btn_390_50"
+        android:backgroundTint="@color/green_color_bold"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/gilroy_bold"
+        android:gravity="center"
+        android:text="Kodni yuborish"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/phoneEditTextNumber"
+        app:layout_constraintStart_toStartOf="@+id/code"
+        app:layout_constraintTop_toBottomOf="@+id/phoneEditTextNumber" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/sendOTPBtn"
+        app:layout_constraintStart_toStartOf="@+id/sendOTPBtn"
+        app:layout_constraintTop_toBottomOf="@+id/sendOTPBtn">
+
+        <ImageView
+            android:id="@+id/sign_google"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/google"
+
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/gilroy_medium"
+            android:gravity="center"
+            android:text="Google orqali ro'yxatdan o'tish"
+            android:textColor="@color/green_color_bold"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:indeterminateTint="@color/green_color_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

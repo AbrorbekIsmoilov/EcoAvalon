@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signUp">
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.example.ecoavalon.fragment.registration.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_verificationCode"
+            app:destination="@id/verificationCode" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationCode"
+        android:name="com.example.ecoavalon.fragment.registration.VerificationCode"
+        android:label="fragment_verification_code"
+        tools:layout="@layout/fragment_verification_code" >
+        <action
+            android:id="@+id/action_verificationCode_to_activity"
+            app:destination="@id/activity" />
+    </fragment>
+    <fragment
+        android:id="@+id/activity"
+        android:name="com.example.ecoavalon.fragment.registration.Activity"
+        android:label="fragment_activity"
+        tools:layout="@layout/fragment_activity" />
+</navigation>

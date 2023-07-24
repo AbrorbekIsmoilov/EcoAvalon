@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Verification">
+    <ImageView
+        android:id="@+id/sign_up_three_image_title"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_square"
+        android:backgroundTint="@color/white"
+        android:paddingTop="5dp"
+        android:src="@drawable/eco2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sign_up_three_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/gilroy_semibold"
+        android:text="Phone verfication"
+        android:textColor="#15753D"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_three_image_title" />
+
+    <TextView
+        android:id="@+id/sign_up_three_title_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="16"
+        android:fontFamily="@font/gilroy_regular"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="Biz sizning +998 91-***-**-32\n raqamingizga SMS kod yubordik"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/green_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_three_title" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/firstPinView"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:textColor="@color/green_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="48dp"
+        app:itemRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_three_title_two"
+        app:layout_constraintVertical_bias="0.1"
+        app:lineColor="#4CAF50"
+        app:lineWidth="2dp"
+        app:viewType="rectangle" />
+
+    <LinearLayout
+        android:id="@+id/verification_time_and_replay_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstPinView">
+
+        <TextView
+            android:id="@+id/sign_up_verification_timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:text="1 : 59"
+            android:textStyle="bold"
+            android:textColor="@color/green_color_bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/recovery_code_replay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@drawable/text_lines_bottom"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="Qaytadan yuborish"
+            android:visibility="invisible"
+            android:textSize="18sp"
+            android:textColor="@color/green_color_bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sign_up_next_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/background_btn_390_50"
+        android:backgroundTint="@color/green_color_bold"
+        android:fontFamily="@font/gilroy_bold"
+        android:gravity="center"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_three_sign_in_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/sign_up_three_sign_in_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_next_btn"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_next_btn">
+
+        <TextView
+            android:id="@+id/sign_up_title_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_medium"
+            android:text="Already have an account ?" />
+
+        <TextView
+            android:id="@+id/sign_up_sign_in_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/gilroy_bold"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="Sign in"
+            android:textColor="@color/green_color_bold"
+            android:textSize="16sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
